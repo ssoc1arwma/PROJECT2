@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Circle Area Calculation</title>
+    <script src="circle.js"></script>
+    <link rel="stylesheet" type=""text/css href="style.css">
+
+</head>
+<body>
+    <div class="box">
+        <h1 style="position: relative; left: 12%;">Υπολογισμός εμβαδού κύκλου</h1>
+        <p class="rule"> Για να βρούμε το εμβαδόν επιφάνειας του κυκλικού δίσκου χρησιμοποιούμε τον μαθηματικό τύπο:A=π*r*r
+            Όπου, A (=area) το εμβαδόν του κύκλου, r η ακτίνα και π (μαθηματική σταθερά που ορίζεται ως ο λόγος 
+            της περιφέρειας προς τη διάμετρο ενός κύκλου και είναι με ακρίβεια οκτώ δεκαδικών ψηφίων ίσος με 3,14159265)</p>
+            <img src="circler.png" alt="Επιφάνεια Κύκλου" style="width:14%; position: relative; left: 15%; ">
+
+        <h2 style="position: relative; left:5%">Υπολογιστής εμβαδού επιφάνειας κύκλου ή κυκλικού δίσκου</h2>
+        <p style="width:50%; text-align: justify;">Μπορείτε να υπολογίσετε το εμβαδό του κύκλου εισάγοντας την γνωστή τιμή της ακτίνας του <b style="color:red">r</b> σε cm στο ενεργοποιημένο πεδίο</p>
+        
+        <div class = "container">
+            <div class="row">
+                <div class="column"><p>Τιμή της ακτίνας r (cm) </p></div>
+                <div class="column"><p>Υπολογισμός Εμβαδού Κύκλου (cm2) </p></div>
+            </div>
+            <div class="row">
+                <div class="column"><input id="radius"></div>
+                <div class="column"><button id="calcButton" onclick="oncalcButtonClick()">Υπολογισμός</button></div>
+            </div>
+            <div class="row">
+                <div class="column"><p id="result" class="result"></p></div> 
+            </div>
+        </div> 
+    </div>
+    <script>
+        let inputR = document.getElementById("radius");
+        let result = document.getElementById("result");
+
+        
+            inputR.value = "";
+            inputR.style.backgroundColor = "yellow";
+
+            function oncalcButtonClick() {
+                document.getElementById("result").innerHTML = "Το εμβαδό του κύκλου είναι " + Circle_Area(inputR.value);   
+            }   
+    </script>
+</body>
+</html>

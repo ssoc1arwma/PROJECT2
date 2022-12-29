@@ -1,0 +1,56 @@
+/* Author: Roma Aliki
+
+Περιγραφή:
+    Αρχείο μορφοποίησης css για την σελίδα που θα φιλοξενήσει τον υπολογιστή του εμβαδού κύκλου
+*/
+* {
+    box-sizing: border-box;
+}
+.container {
+    width: 50%;
+    border: 2px solid blue;
+    margin: 10px;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+input {
+    width: 100%;
+}
+button {
+    width: 100%;
+    overflow: hidden;
+}
+.result {
+    text-align: center;
+}
+.rule {
+    border: 2px solid green;
+    border-radius: 20px;
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    font-size: large;
+    text-align: center;
+}
+h1,h2 {
+    margin: 10px;
+    color: rgb(34, 24, 184);
+}
+p {
+    margin: 10px;
+    text-align: center;
+}
+.box {
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    left: 25%;
+}
